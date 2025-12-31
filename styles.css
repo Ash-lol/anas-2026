@@ -1479,114 +1479,714 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - COMPREHENSIVE MOBILE
    ============================================ */
 
-@media (max-width: 768px) {
+/* Tablet Styles */
+@media (max-width: 900px) {
     .notebook {
-        min-height: auto;
-        border-radius: 5px 15px 15px 5px;
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
     }
 
     .notebook-spine {
-        width: 25px;
+        width: 20px;
     }
 
     .pages-container {
-        margin-left: 25px;
+        margin-left: 20px;
     }
 
     .page-content {
         padding: 20px 15px;
+        padding-bottom: 100px;
+    }
+
+    .page-inner {
+        padding: 15px;
+    }
+
+    .decorative-corner {
+        width: 25px;
+        height: 25px;
+        border-width: 2px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .notebook {
+        min-height: 100vh;
+        min-height: 100dvh;
+        border-radius: 0;
+    }
+
+    .notebook-spine {
+        width: 15px;
+    }
+
+    .notebook-spine::before {
+        left: 3px;
+        width: 10px;
+    }
+
+    .pages-container {
+        margin-left: 15px;
+    }
+
+    .page-content {
+        padding: 15px 12px;
+        padding-bottom: 90px;
+    }
+
+    .page-inner {
+        padding: 10px;
+    }
+
+    /* PAGE 1: WELCOME - Mobile */
+    .welcome-title {
+        margin-bottom: 20px;
     }
 
     .year-text {
-        font-size: 3.5rem;
+        font-size: 2.8rem;
     }
 
     .main-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin: 8px 0;
     }
 
     .name-title {
-        font-size: 2.5rem;
-    }
-
-    .page-title {
-        font-size: 1.6rem;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-number {
         font-size: 2rem;
+    }
+
+    .hearts-container {
+        margin: 15px 0;
+    }
+
+    .heart {
+        font-size: 1.5rem;
+        margin: 0 8px;
+    }
+
+    .welcome-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .lets-go {
+        font-size: 1.4rem;
+    }
+
+    .fireworks {
+        height: 20%;
+    }
+
+    .firework {
+        width: 6px;
+        height: 6px;
+    }
+
+    /* PAGE 2: CAREER - Mobile */
+    .page-title {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .career-intro {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
     }
 
     .achievements {
         grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .achievement {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .achievement-icon {
+        font-size: 1.5rem;
+    }
+
+    .proud-text {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .stats-container {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .stats-container h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-item {
+        padding: 10px 8px;
+        border-radius: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        line-height: 1.3;
+    }
+
+    /* PAGE 3: TIER LIST - Mobile */
+    .games-intro {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
 
     .tier-list {
-        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .tier-row {
+        min-height: 50px;
+        margin-bottom: 6px;
+        border-radius: 8px;
     }
 
     .tier-label {
-        width: 35px;
-        font-size: 1.2rem;
+        width: 80px;
+        min-width: 80px;
+        font-size: 0.7rem;
+        padding: 6px 4px;
+        line-height: 1.1;
+    }
+
+    .tier-games {
+        gap: 5px;
+        padding: 5px;
+        min-height: 40px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .games-pool {
+        gap: 8px;
+        padding: 10px;
+        border-radius: 12px;
+        min-height: 60px;
     }
 
     .game-card {
         padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .game-icon {
+        font-size: 1rem;
     }
 
     .game-name {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 
+    /* PAGE 4: TOOTH - Mobile */
     .tooth-animation-container {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+        margin: 20px 0;
     }
 
+    .tooth {
+        width: 60px;
+        height: 75px;
+        border-radius: 30px 30px 15px 15px;
+    }
+
+    .tooth::before,
+    .tooth::after {
+        bottom: -15px;
+        width: 18px;
+        height: 22px;
+    }
+
+    .tooth::before {
+        left: 6px;
+    }
+
+    .tooth::after {
+        right: 6px;
+    }
+
+    .tooth-eyes {
+        font-size: 0.6rem;
+        gap: 8px;
+    }
+
+    .tooth-mouth {
+        font-size: 0.9rem;
+    }
+
+    .tooth-sparkles span {
+        font-size: 1rem;
+    }
+
+    .vs-text {
+        font-size: 1.5rem;
+    }
+
+    .tool {
+        font-size: 1.5rem;
+    }
+
+    .squirrel-section {
+        margin: 20px 0;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .squirrel-emoji {
+        font-size: 3rem;
+    }
+
+    .nuts span {
+        font-size: 1.2rem;
+    }
+
+    .squirrel-text {
+        font-size: 0.9rem;
+    }
+
+    .tooth-message {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* PAGE 5: QUIZ - Mobile */
+    .hp-intro {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .quiz-progress {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .progress-bar {
+        height: 8px;
+    }
+
+    .progress-text {
+        font-size: 0.8rem;
+    }
+
+    .question-container {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .question-text {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .options {
+        gap: 10px;
+    }
+
+    .option {
+        padding: 12px 15px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+    }
+
+    .option:hover {
+        transform: translateX(5px);
+    }
+
+    .quiz-result {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .quiz-result h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .score-display {
+        font-size: 3rem;
+    }
+
+    #score-message {
+        font-size: 1rem;
+        margin: 15px 0;
+    }
+
+    .retry-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* PAGE 6: FINALE - Mobile */
+    .mountain-scene {
+        height: 160px;
+        margin: 15px 0;
+        border-radius: 15px;
+    }
+
+    .mountains {
+        height: 120px;
+    }
+
+    .mountain.m1 {
+        border-left-width: 40px;
+        border-right-width: 40px;
+        border-bottom-width: 80px;
+        margin-right: -20px;
+    }
+
+    .mountain.m2 {
+        border-left-width: 55px;
+        border-right-width: 55px;
+        border-bottom-width: 110px;
+    }
+
+    .mountain.m3 {
+        border-left-width: 35px;
+        border-right-width: 35px;
+        border-bottom-width: 70px;
+        margin-left: -20px;
+    }
+
+    .snow-cap {
+        top: -25px;
+        border-left-width: 15px;
+        border-right-width: 15px;
+        border-bottom-width: 25px;
+    }
+
+    .m1 .snow-cap {
+        border-left-width: 12px;
+        border-right-width: 12px;
+        border-bottom-width: 22px;
+    }
+
+    .m2 .snow-cap {
+        border-left-width: 18px;
+        border-right-width: 18px;
+        border-bottom-width: 30px;
+    }
+
+    .m3 .snow-cap {
+        border-left-width: 10px;
+        border-right-width: 10px;
+        border-bottom-width: 18px;
+    }
+
+    .jumping-girl {
+        bottom: 60px;
+    }
+
+    .oshawott {
+        font-size: 2.5rem;
+    }
+
+    .snow-ground {
+        height: 20px;
+    }
+
+    .mountain-text {
+        font-size: 0.95rem;
+        margin: 15px 0;
+    }
+
+    .finale-message {
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+    }
+
+    .finale-message h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .love-hearts {
+        gap: 8px;
+        margin: 12px 0;
+    }
+
+    .love-hearts span {
+        font-size: 1.2rem;
+    }
+
+    .love-text {
+        font-size: 1.5rem;
+    }
+
+    .confetti {
+        font-size: 1.5rem;
+    }
+
+    /* NAVIGATION - Mobile */
     .navigation {
-        left: 30px;
-        padding: 0 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 12px 15px;
+        background: linear-gradient(to top, rgba(255, 245, 245, 0.98), rgba(255, 245, 245, 0.9));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 -4px 20px rgba(220, 20, 60, 0.1);
+        z-index: 100;
+        border-radius: 15px 15px 0 0;
     }
 
     .nav-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        border-radius: 20px;
     }
 
     .nav-btn span {
         display: none;
     }
+
+    .page-indicator {
+        font-size: 0.85rem;
+    }
+
+    /* Snowflakes - Mobile */
+    .snowflakes {
+        z-index: 50;
+    }
+
+    .snowflake {
+        font-size: 1rem !important;
+        opacity: 0.6;
+    }
 }
 
+/* Small Mobile Styles */
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
+    .page-content {
+        padding: 12px 10px;
+        padding-bottom: 85px;
+    }
+
+    .page-inner {
+        padding: 8px;
     }
 
     .year-text {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .main-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .name-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .heart {
+        font-size: 1.2rem;
+        margin: 0 5px;
     }
 
     .welcome-text {
-        font-size: 1rem;
+        font-size: 0.85rem;
     }
 
     .lets-go {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .tier-label {
+        width: 65px;
+        min-width: 65px;
+        font-size: 0.6rem;
+    }
+
+    .game-card {
+        padding: 5px 8px;
+    }
+
+    .game-icon {
+        font-size: 0.9rem;
+    }
+
+    .game-name {
+        font-size: 0.6rem;
+    }
+
+    .question-text {
+        font-size: 0.9rem;
+    }
+
+    .option {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+
+    .mountain-scene {
+        height: 140px;
+    }
+
+    .oshawott {
+        font-size: 2rem;
+    }
+
+    .finale-message h3 {
+        font-size: 1rem;
+    }
+
+    .love-text {
+        font-size: 1.3rem;
+    }
+
+    .nav-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Mobile (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .year-text {
+        font-size: 1.9rem;
+    }
+
+    .main-title {
+        font-size: 1.1rem;
+    }
+
+    .name-title {
+        font-size: 1.4rem;
+    }
+
+    .page-title {
+        font-size: 1.1rem;
+    }
+
+    .stat-number {
+        font-size: 1.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.55rem;
+    }
+
+    .tier-label {
+        width: 55px;
+        min-width: 55px;
+        font-size: 0.55rem;
+    }
+
+    .game-name {
+        font-size: 0.55rem;
+    }
+
+    .question-text {
+        font-size: 0.85rem;
+    }
+
+    .option {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+    .notebook {
+        min-height: 100vh;
+    }
+
+    .page-content {
+        padding-bottom: 80px;
+    }
+
+    .tooth-animation-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .mountain-scene {
+        height: 120px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .nav-btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .option {
+        min-height: 48px;
+    }
+
+    .game-card {
+        min-height: 40px;
+    }
+
+    .retry-btn {
+        min-height: 48px;
+    }
+
+    .achievement:hover {
+        transform: none;
+    }
+
+    .option:hover {
+        transform: none;
+    }
+
+    .nav-btn:hover:not(:disabled) {
+        transform: none;
     }
 }
